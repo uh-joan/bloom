@@ -1,11 +1,12 @@
 # bloom and wild experimental checkout form
-===
 
 ## Instructions
 
-`npm install`
-`bower install`
-`npm start`
+1. `npm install`
+
+2. `bower install`
+
+3. `npm start`
 
 then head to 
 
