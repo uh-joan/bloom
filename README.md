@@ -1,4 +1,4 @@
-# bloomandwild checkout
+# Bloom&Wild Checkout
 
 `npm install`
 
