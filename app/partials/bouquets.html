@@ -2,6 +2,7 @@
     <div class="nl-title col-md-12">
         <h3>ORDER DETAILS</h3>
     </div>
+    <!--image and label-->
     <div class="col-md-12 ">
         <div class="col-md-12">
             <img class="nl-img" ng-src="{{bouquetImg}}">
@@ -12,7 +13,7 @@
             </div>
         </div>
     </div>
-
+    <!--Natural language form-->
     <div class="col-md-12">
         <form id="nl-form" class="nl-form">
             <div class="col-md-12">
@@ -34,7 +35,7 @@
                             ng-repeat="bouquet in bouquets">{{bouquet.name}}</option>
                 </select>
             </div>
-
+            <!--delivery date and date picker-->
             <div class="row">
                     <div class="form-group">
                         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -50,7 +51,7 @@
                         </div>
                     </div>
             </div>
-
+            <!--total price-->
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="col-xs-6 col-sm-6 col-md-6 nl-price-label">ORDER<br/>TOTAL</div>
@@ -60,10 +61,10 @@
             </div>
             <div class="row">
                 <div ng-show="toggle_correction" class=" nl-price-correction">
-                    * Add 3.5£ to deliver from 23rd December to January 3rd
+                    *Add £3.5 to deliveries from December 23rd to January 3rd
                 </div>
             </div>
-
+            <!--submit button-->
             <div class="nl-submit-wrap">
                 <button class="nl-submit" type="submit">Continue to your details</button>
             </div>

@@ -3,6 +3,8 @@ angular
     .controller('BouquetsController', ['$scope', '$http', function ($scope, $http) {
         $scope.bouquets=[];
 
+        //get data from file
+        //
         $http.get ('data/collections.json').success(function(data){
             angular.forEach(data.collections, function(collection){
                 angular.forEach(collection.skus, function(sku){
@@ -18,6 +20,7 @@ angular
             $scope.bouquet_name = $scope.bouquets[0].name;
         });
 
+        //set deliveries and subscriptions options
         $scope.deliveries = [
             {'name': 'month',
                 'amount': '1',
@@ -29,7 +32,6 @@ angular
                 'amount': '4',
                 'selected': false},
         ];
-
         $scope.subscriptions = [
             {'name': '3 months',
                 'amount': '3',
@@ -45,16 +47,15 @@ angular
                 'selected': false}
         ];
 
+        //set initial values
         $scope.deliveries.forEach (function (delivery)
             {if (delivery.selected == true) $scope.selected_delivery = delivery.amount;
         });
-
         $scope.subscriptions.forEach (function (subscription)
         {if (subscription.selected == true) $scope.selected_subscription = subscription.amount;
         });
-//        $scope.selected_delivery = _.find($scope.deliveries, {'selected':true});
-//        $scope.selected_subscription = _.find($scope.subscriptions, {'selected':true});
 
+        // when bouquet is selected set image and bouquet price
         $scope.setImageAndPriceBouquet = function(bouquetId){
             $scope.bouquets.forEach (function (bouquet)
             {if (bouquet.id == bouquetId)
@@ -64,52 +65,52 @@ angular
                    $scope.bouquet_name = bouquet.name;
                }
             });
-//            _.find($scope.bouquets, {'id':bouquetId}, function(res){
-//                $scope.bouquetImg = res.image_urls.website_main;
-//                console.log(res);
-//            });
         };
 
+        //Date picker stuff
+        //
+        //set date tomorrow
         $scope.tomorrow = function() {
             var tomorrow = new Date();
-            $scope.dt = tomorrow.setDate(tomorrow.getDate()+1);
+            tomorrow.setDate(tomorrow.getDate()+1);
+            $scope.dt = tomorrow;
+            $scope.minDate = $scope.minDate ? null : tomorrow;
         };
         $scope.tomorrow();
-
-//        Disable weekend selection
+        // disable weekend selection
         $scope.disabled = function(date, mode) {
             return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
         };
-        $scope.toggleMin = function() {
-            var tomorrow = new Date();
-            tomorrow.setDate(tomorrow.getDate()+1);
-            $scope.minDate = $scope.minDate ? null : tomorrow;
-        };
-        $scope.toggleMin();
-
+        // when clicked on date open calendar
         $scope.open = function($event) {
             $event.preventDefault();
             $event.stopPropagation();
 
             $scope.opened = true;
         };
-
+        // some date options
         $scope.dateOptions = {
             formatYear: 'yy',
             startingDay: 1,
             showWeeks: false
         };
 
+        // to hide/show the correction text
         $scope.toggle_correction = false;
-
+        // when date changes check that is within ranges to apply correction
         $scope.checkDate = function(){
             var fromDate=Date.parse("Tue Dec 23 2014 00:00:00 GMT+0000 (GMT)");
             var toDate=Date.parse("Fri Jan 03 2015 00:00:00 GMT+0000 (GMT)");
+
             if ( $scope.dt <= toDate && $scope.dt >= fromDate )
-                {$scope.date_correction = 3.5;
-                $scope.toggle_correction = true; }
+                {
+                    $scope.date_correction = 3.5;
+                    $scope.toggle_correction = true;
+                }
             else
-                {$scope.date_correction = 0;
-                    $scope.toggle_correction = false;}
+                {
+                    $scope.date_correction = 0;
+                    $scope.toggle_correction = false;
+                }
         }
     }]);
