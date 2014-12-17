@@ -16,14 +16,14 @@
     <!--Natural language form-->
     <div class="col-md-12">
         <form id="nl-form" class="nl-form">
-            <div class="col-md-12">
+            <div class="nl-text col-md-12">
                 Send different, seasonal flowers every
                 <select ng-model="selected_delivery">
                     <!--<option selected="{{delivery.selected}}" value="{{delivery.amount}}" ng-repeat="delivery in deliveries">{{delivery.name}}</option>-->
                     <option value="{{delivery.amount}}" ng-repeat="delivery in deliveries">{{delivery.name}}</option>
                 </select>
             </div>
-            <div class="col-md-12">
+            <div class="nl-text col-md-12">
                 for
                 <select ng-model="selected_subscription">
                     <option selected="{{subscription.selected}}" value="{{subscription.amount}}" ng-repeat="subscription in subscriptions">{{subscription.name}}</option>

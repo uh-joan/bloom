@@ -44,14 +44,13 @@
     line-height: 1.5;
     text-align: center;
     /*font-family: parisish;*/
-    font-family: dancing;
-
 }
 
 /* normalize the input elements, make them look like everything else */
 .nl-form input,
 .nl-form select,
 .nl-form button {
+    font-family: dancing;
     border: none;
     background: transparent;
     font-family: inherit;
@@ -64,6 +63,10 @@
     margin: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+
+.nl-text {
+    font-family: dancing;
 }
 
 .nl-form input:focus {
@@ -84,6 +87,7 @@
 .nl-field-toggle,
 .nl-form input,
 .nl-form select  {
+    font-family: dancing;
     line-height: inherit;
     display: inline-block;
     color: #a4a4a4;
@@ -91,13 +95,13 @@
     border-bottom: 1px dashed #a4a4a4;
 }
 
-
 /* submit button */
 .nl-submit-wrap {
     margin-top: 0.4em;
 }
 
 .nl-form .nl-submit {
+    font-family: dancing;
     line-height: 3;
     text-transform: uppercase;
     cursor: pointer;
@@ -118,6 +122,7 @@
 }
 
 .nl-price-total{
+    font-family: dancing;
     font-size: 1.5em;
     text-align: left;
     padding-top: 15px;
@@ -141,6 +146,6 @@
 
 .nl-date{
     text-align: center;
-    width: 300px;
+    width: 275px;
 }
 
