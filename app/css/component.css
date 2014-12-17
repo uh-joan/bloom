@@ -14,7 +14,7 @@
 
 .nl-img-label{
     width: 150px;
-    height: 50px;
+    height: 30px;
     border-radius: 5%;
     background-color: #cdcdcd;
     opacity: 0.7;
@@ -24,9 +24,9 @@
 }
 
 .nl-img-label p{
-    font-family: parisish;
+    /*font-family: parisish;*/
     color:#000;
-    font-size: 2.4em;
+    font-size: 1.5em;
     text-align: center;
 }
 
@@ -37,7 +37,7 @@
     font-size: 2.4em;
     line-height: 1.5;
     text-align: center;
-    font-family: parisish;
+    /*font-family: parisish;*/
 }
 
 /* normalize the input elements, make them look like everything else */
@@ -121,7 +121,7 @@
 
 .nl-title{
     text-align: center;
-    font-family: parisish;
+    /*font-family: parisish;*/
 }
 
 .nl-date-label{
@@ -131,6 +131,6 @@
 
 .nl-date{
     text-align: center;
-    /*width: 250px;*/
+    width: 300px;
 }
 

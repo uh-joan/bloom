@@ -1,11 +1,9 @@
 angular
     .module('appBloom')
     .controller('BouquetsController', ['$scope', '$http', function ($scope, $http) {
-//        $scope.collections =[];
         $scope.bouquets=[];
 
         $http.get ('data/collections.json').success(function(data){
-//            $scope.collections = data.collections;
             angular.forEach(data.collections, function(collection){
                 angular.forEach(collection.skus, function(sku){
                     //lowest_price is in collection.
