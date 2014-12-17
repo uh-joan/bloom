@@ -1,0 +1,118 @@
+@font-face {
+    font-family: parisish;
+    src: url(../fonts/Parisish.ttf);
+}
+
+.nl-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 275px;
+    height: 275px;
+}
+
+/* general style for the form */
+.nl-form {
+    width: 100%;
+    margin: 0.3em auto 0 auto;
+    font-size: 2.4em;
+    line-height: 1.5;
+    text-align: center;
+    font-family: parisish;
+}
+
+/* normalize the input elements, make them look like everything else */
+.nl-form input,
+.nl-form select,
+.nl-form button {
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.nl-form input:focus {
+    outline: none;
+}
+
+/* custom field (drop-down, text element) styling  */
+.nl-field {
+    display: inline-block;
+    position: relative;
+}
+
+.nl-field.nl-field-open {
+    z-index: 10000;
+}
+
+/* the toggle is the visible part in the form */
+.nl-field-toggle,
+.nl-form input,
+.nl-form select  {
+    line-height: inherit;
+    display: inline-block;
+    color: #a4a4a4;
+    cursor: pointer;
+    border-bottom: 1px dashed #a4a4a4;
+}
+
+
+/* submit button */
+.nl-submit-wrap {
+    margin-top: 0.4em;
+}
+
+.nl-form .nl-submit {
+    line-height: 3;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    background: #4a4a4a;
+    color: #fff;
+    padding: 0 1em 0 1em;
+    font-size: 40%;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+
+.nl-price-label {
+    font-size: 0.4em;
+    padding-top: 35px;
+    text-align: right;
+}
+
+.nl-price-total{
+    font-size: 1.5em;
+    text-align: left;
+    padding-top: 15px;
+}
+
+.nl-price-correction{
+    font-size: 0.5em;
+}
+
+.nl-title{
+    text-align: center;
+    font-family: parisish;
+}
+
+.nl-date-label{
+    font-size: 0.4em;
+    padding-top: 15px;
+}
+
+.nl-date{
+    text-align: center;
+    /*width: 250px;*/
+}
+

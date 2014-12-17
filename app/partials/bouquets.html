@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <div class="nl-title col-md-12">
+        <h3>ORDER DETAILS</h3>
+    </div>
+    <div class="col-md-12 ">
+        <img class="nl-img" ng-src="{{bouquetImg}}">
+    </div>
+
+    <div class="col-md-12">
+        <form id="nl-form" class="nl-form">
+            <div class="col-md-12">
+                Send different, seasonal flowers every
+                <select ng-model="selected_delivery">
+                    <!--<option selected="{{delivery.selected}}" value="{{delivery.amount}}" ng-repeat="delivery in deliveries">{{delivery.name}}</option>-->
+                    <option value="{{delivery.amount}}" ng-repeat="delivery in deliveries">{{delivery.name}}</option>
+                </select>
+            </div>
+            <div class="col-md-12">
+                for
+                <select ng-model="selected_subscription">
+                    <option selected="{{subscription.selected}}" value="{{subscription.amount}}" ng-repeat="subscription in subscriptions">{{subscription.name}}</option>
+                    <!--<option value="{{subscription.amount}}" ng-repeat="subscription in subscriptions">{{subscription.name}}</option>-->
+                </select>
+                starting with
+                <select ng-model="selected_bouquet" ng-click="setImageAndPriceBouquet(selected_bouquet)">
+                    <option value="{{bouquet.id}}"
+                            ng-repeat="bouquet in bouquets">{{bouquet.name}}</option>
+                </select>
+            </div>
+
+            <div class="row">
+                    <div class="form-group">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div ng-click="open($event)" class="nl-date-label">
+                                FIRST DELIVERY DATE <span class="small"> (click to change) </span></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <input class="nl-date" type="text" datepicker-popup="dd MMMM, yyyy"
+                                   date-disabled="disabled(date,mode)" ng-change="checkDate()"
+                                   is-open="opened" ng-model="dt" min-date ="minDate"
+                                   datepicker-options="dateOptions" show-button-bar="false"
+                                   placeholder="dd MMMM, yyyy" ng-click="open($event)"/>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="col-xs-6 col-sm-6 col-md-6 nl-price-label">ORDER<br/>TOTAL</div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 nl-price-total">
+                        £{{selected_delivery * selected_subscription * lowest_price + date_correction}}</div>
+                </div>
+            </div>
+            <div class="row">
+                <div ng-show="toggle_correction" class=" nl-price-correction">
+                    * Add 3.5£ to deliver from 23rd December to January 3rd
+                </div>
+            </div>
+
+            <div class="nl-submit-wrap">
+                <button class="nl-submit" type="submit">Continue to your details</button>
+            </div>
+        </form>
+    </div>
+
+</div>

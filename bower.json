@@ -1,0 +1,20 @@
+{
+  "name": "bloomandwild",
+  "description": "A Bloom and Wild checkout",
+  "version": "0.0.1",
+  "homepage": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.16",
+    "angular-mocks": "1.2.16",
+    "bootstrap": "~3.1.1",
+    "angular-route": "1.2.16",
+    "angular-resource": "1.2.16",
+    "lodash": "~2.4.1",
+    "jquery": "~2.1.1",
+    "angular-datepicker": "~1.0.3",
+    "ui.bootstrap": "~0.12.0",
+    "angular-bootstrap": "~0.12.0"
+  }
+}
