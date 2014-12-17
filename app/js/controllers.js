@@ -17,6 +17,7 @@ angular
             $scope.bouquetImg = $scope.bouquets[0].image_urls.website_main;
             $scope.lowest_price = $scope.bouquets[0].lowest_price;
             $scope.selected_bouquet = $scope.bouquets[0].id;
+            $scope.bouquet_name = $scope.bouquets[0].name;
         });
 
         $scope.deliveries = [
@@ -62,6 +63,7 @@ angular
                {
                    $scope.bouquetImg = bouquet.image_urls.website_main;
                    $scope.lowest_price = bouquet.lowest_price;
+                   $scope.bouquet_name = bouquet.name;
                }
             });
 //            _.find($scope.bouquets, {'id':bouquetId}, function(res){
