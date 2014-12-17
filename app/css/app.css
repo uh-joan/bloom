@@ -3,6 +3,11 @@
     src: url(../fonts/Parisish.ttf);
 }
 
+@font-face {
+    font-family: dancing;
+    src: url(../fonts/DancingScript.ttf);
+}
+
 .nl-img {
     display: block;
     margin-left: auto;
@@ -25,6 +30,7 @@
 
 .nl-img-label p{
     /*font-family: parisish;*/
+    font-family: dancing;
     color:#000;
     font-size: 1.5em;
     text-align: center;
@@ -38,6 +44,8 @@
     line-height: 1.5;
     text-align: center;
     /*font-family: parisish;*/
+    font-family: dancing;
+
 }
 
 /* normalize the input elements, make them look like everything else */
@@ -122,6 +130,8 @@
 .nl-title{
     text-align: center;
     /*font-family: parisish;*/
+    font-family: dancing;
+
 }
 
 .nl-date-label{
